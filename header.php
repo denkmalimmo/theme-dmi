@@ -20,6 +20,7 @@
   <?php roots_head(); ?>
   <link rel="stylesheet" type="text/css" media="all" href="/../stylesheets/compiled/grid.css" />
   <link rel="stylesheet" type="text/css" media="all" href="/../stylesheets/thickbox.css" />
+  <link rel="stylesheet" type="text/css" media="all" href="/blog/wp-content/themes/theme-dmi/style.css" />
   <script src="/../javascripts/jquery.tools.min.js"></script>
   <script src="/../javascripts/thickbox.js"></script>
   <script src="/../javascripts/cufon.js"></script>
