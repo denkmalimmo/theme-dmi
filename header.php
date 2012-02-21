@@ -7,8 +7,9 @@
   <!-- / WEBMASTERTOOLS VERIFICATION -->
   <meta content="7FkS5x5z7SDnRIUL4pf/lozHbpK5B8Z6w8JKRxnQ9GA=" name="verify-v1" />
   <meta charset="utf-8">
-  <meta content="Bundesweite Top-Angebote an Denkmalschutz Immobilien. Zahlreiche Informationen zu Denkmalimmobilien fÃ¼r Kapitalanleger & Eigenutzer." name="description" />
-  <meta content="Denkmalschutz Immobilien, Denkmalschutz, Denkmalimmobilien, Denkmal Immobilien, Baudenkmal, DenkmalgeschÃ¼tzte Immobilien" name="keywords" />
+  <meta content="Bundesweite Top-Angebote an Denkmalschutz Immobilien. Zahlreiche Informationen zu Denkmalimmobilien für Kapitalanleger & Eigenutzer." name="description" />
+  <meta content="Denkmalschutz Immobilien, Denkmalschutz, Denkmalimmobilien, Denkmal Immobilien, Baudenkmal, Denkmalgeschützte Immobilien" name="keywords" />
+  <meta content="NOODP" name="robots" />
   <title><?php wp_title('|', true, 'right'); bloginfo('name'); ?></title>
   <meta name="viewport" content="width=device-width">
   <link href="http://denkmalimmobilien.local/denkmalimmobilien-atom.xml" rel="alternate" title="Aktuelle Objekte von Denkmalimmobilien.info" type="application/atom+xml" />
@@ -26,6 +27,7 @@
   <script src="/../javascripts/cufon.js"></script>
   <script src="/../javascripts/font.js"></script>
   <script src="/../javascripts/application.js"></script>
+  <?php wp_head(); ?>
 </head>
 
 <body <?php body_class(roots_body_class()); ?>>

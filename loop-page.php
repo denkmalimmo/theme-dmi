@@ -3,8 +3,11 @@
   <?php roots_post_before(); ?>
     <?php roots_post_inside_before(); ?>
       <div class="page-header">
-      	<h1><?php the_title(); ?></h1>
-      </div>
+      	<h1><a href="<?php the_permalink(); ?>" title="<?php printf( esc_attr__( 'Permalink to %s'), the_title_attribute( 'echo=0' ) ); ?>" rel="bookmark"><?php the_title(); ?></a></h1>     
+	  	<div class="entry-meta">
+			<?php roots_entry_meta(); ?>
+		</div><!-- .entry-meta -->
+	  </div>
 	  <?php if(get_post_meta(get_the_ID(), 'fertigstellung', true)): ?>
 		<ul class="fakten">
 			<li><label>Sanierungsanteil:</label><span><?php  echo get_post_meta(get_the_ID(), 'afa', true); ?></span></li>
