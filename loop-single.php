@@ -5,7 +5,9 @@
     <?php roots_post_inside_before(); ?>
       <header>
         <h1 class="entry-title"><?php the_title(); ?></h1>
-        <?php roots_entry_meta(); ?>
+        <div class="entry-meta">
+			<?php roots_entry_meta(); ?>
+		</div><!-- .entry-meta -->		
       </header>
       <div class="entry-content">	
         <?php the_content(); ?>		
