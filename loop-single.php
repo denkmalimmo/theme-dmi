@@ -7,17 +7,7 @@
         <h1 class="entry-title"><?php the_title(); ?></h1>
         <?php roots_entry_meta(); ?>
       </header>
-      <div class="entry-content">
-		  <?php if(get_post_meta(get_the_ID(), 'fertigstellung', true)): ?>
-			<ul class="fakten">
-				<li><label>Sanierungsanteil:</label><span><?php  echo get_post_meta(get_the_ID(), 'afa', true); ?></span></li>
-				<li><?php  echo get_post_meta(get_the_ID(), 'anzahl', true); ?></li>
-				<li><?php  echo get_post_meta(get_the_ID(), 'fertigstellung', true); ?></li>
-				<li><?php  echo get_post_meta(get_the_ID(), 'preise', true); ?></li>
-				<li><?php  echo get_post_meta(get_the_ID(), 'sizes', true); ?></li>
-				<li><?php  echo get_post_meta(get_the_ID(), 'archive', true); ?></li>
-			<ul>
-		  <?php endif; ?>	
+      <div class="entry-content">	
         <?php the_content(); ?>		
       </div>
       <footer>

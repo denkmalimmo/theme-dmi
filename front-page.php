@@ -7,6 +7,13 @@
 			<?php roots_loop_before(); ?>
 			<?php get_template_part('loop', 'page'); ?>
 			<?php roots_loop_after(); ?>
+			<?php /* Display navigation to next/previous pages when applicable */ ?>
+			<?php if ($wp_query->max_num_pages > 1) { ?>
+			  <nav id="post-nav" class="pager">
+				<div class="previous"><?php next_posts_link(__('&larr; Older posts', 'roots')); ?></div>
+				<div class="next"><?php previous_posts_link(__('Newer posts &rarr;', 'roots')); ?></div>
+			  </nav>
+			<?php } ?>
 		  </div><!-- /#main -->
 		<?php roots_main_after(); ?>
 		<?php roots_sidebar_before(); ?>

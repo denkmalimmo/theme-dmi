@@ -19,17 +19,8 @@
       <div class="entry-content">
         <?php if (is_archive() || is_search()) { ?>
           <?php the_excerpt(); ?>
-        <?php } else { ?>
-		  <?php if(get_post_meta(get_the_ID(), 'fertigstellung', true)): ?>
-			<ul class="fakten">
-				<li><label>Sanierungsanteil:</label><span><?php  echo get_post_meta(get_the_ID(), 'afa', true); ?></span></li>
-				<li><?php  echo get_post_meta(get_the_ID(), 'anzahl', true); ?></li>
-				<li><?php  echo get_post_meta(get_the_ID(), 'fertigstellung', true); ?></li>
-				<li><?php  echo get_post_meta(get_the_ID(), 'preise', true); ?></li>
-				<li><?php  echo get_post_meta(get_the_ID(), 'sizes', true); ?></li>
-				<li><?php  echo get_post_meta(get_the_ID(), 'archive', true); ?></li>
-			<ul>
-		  <?php endif; ?>	
+		  <p class="more"><a href="<?php the_permalink(); ?>" title="<?php the_title(); ?>">weiterlesen...</a></p>
+        <?php } else { ?>	
           <?php the_content(); ?>
         <?php } ?>
       </div>
