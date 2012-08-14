@@ -35,7 +35,7 @@
 
   <?php roots_header_before(); ?>
     <header id="banner" class="navbar navbar-fixed-top" role="banner">
-		<?php $a = file_get_contents("http://" . $_SERVER['SERVER_NAME'] . "/static/header"); echo $a; ?> 
+		<?php $a = file_get_contents("http://dmi-dev.local/static/header"); echo $a; ?> 
     </header>
   <?php roots_header_after(); ?>
 
