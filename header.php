@@ -27,6 +27,7 @@
   <script src="/../javascripts/cufon.js"></script>
   <script src="/../javascripts/font.js"></script>
   <script src="/../javascripts/application.js"></script>
+  <script src="/../slider/js/jquery.anythingslider.js"></script>
   <?php wp_head(); ?>
 </head>
 
