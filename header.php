@@ -35,7 +35,13 @@
 
   <?php roots_header_before(); ?>
     <header id="banner" class="navbar navbar-fixed-top" role="banner">
-		<?php $a = file_get_contents("http://" . $_SERVER['SERVER_NAME'] . "/static/header"); echo $a; ?>
+	<?php 
+		$ch = curl_init(); 
+		curl_setopt($ch, CURLOPT_URL, "http://" . $_SERVER['SERVER_NAME'] . "/static/header");
+		curl_setopt($ch, CURLOPT_RETURNTRANSFER, 1);
+		$output = curl_exec($ch); 
+		echo $output;
+	?>
     </header>
   <?php roots_header_after(); ?>
 
