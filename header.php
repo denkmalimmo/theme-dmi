@@ -12,21 +12,23 @@
   <meta content="NOODP" name="robots" />
   <title><?php wp_title('|', true, 'right'); bloginfo('name'); ?></title>
   <meta name="viewport" content="width=device-width">
-  <link href="http://denkmalimmobilien.local/denkmalimmobilien-atom.xml" rel="alternate" title="Aktuelle Objekte von Denkmalimmobilien.info" type="application/atom+xml" />
+  <link href="http://<?php echo $_SERVER['SERVER_NAME']?>/feed" rel="alternate" title="Aktuelle Objekte von Denkmalimmobilien.info" type="application/atom+xml" />
   <link href="/favicon.ico" rel="shortcut icon" type="image/png" />
   <link href="https://plus.google.com/117040894947328715493" rel="publisher" />
   <script src="<?php echo get_template_directory_uri(); ?>/js/libs/modernizr-2.5.0.min.js"></script>
   <script src="//ajax.googleapis.com/ajax/libs/jquery/1.7.1/jquery.min.js"></script>
   <script>window.jQuery || document.write('<script src="<?php echo get_template_directory_uri(); ?>/js/libs/jquery-1.7.1.min.js"><\/script>')</script>
   <?php roots_head(); ?>
-  <link rel="stylesheet" type="text/css" media="all" href="/../stylesheets/compiled/grid.css" />
-  <link rel="stylesheet" type="text/css" media="all" href="/../stylesheets/thickbox.css" />
+  <link rel="stylesheet" type="text/css" media="all" href="http://<?php echo $_SERVER['SERVER_NAME']?>/stylesheets/compiled/grid.css" />
+  <link rel="stylesheet" type="text/css" media="all" href="http://<?php echo $_SERVER['SERVER_NAME']?>/stylesheets/thickbox.css" />
   <link rel="stylesheet" type="text/css" media="all" href="<?php echo get_stylesheet_directory_uri(); ?>/style.css" />
-  <script src="/../javascripts/jquery.tools.min.js"></script>
-  <script src="/../javascripts/thickbox.js"></script>
-  <script src="/../javascripts/cufon.js"></script>
-  <script src="/../javascripts/font.js"></script>
-  <script src="/../javascripts/application.js"></script>
+  <script src="http://<?php echo $_SERVER['SERVER_NAME']?>/javascripts/jquery.tools.min.js"></script>
+  <script src="http://<?php echo $_SERVER['SERVER_NAME']?>/javascripts/thickbox.js"></script>
+  <script src="http://<?php echo $_SERVER['SERVER_NAME']?>/javascripts/cufon.js"></script>
+  <script src="http://<?php echo $_SERVER['SERVER_NAME']?>/javascripts/font.js"></script>
+  <script src="http://<?php echo $_SERVER['SERVER_NAME']?>/javascripts/application.js"></script>
+  <script src="http://<?php echo $_SERVER['SERVER_NAME']?>/javascripts/forms.js"></script>  
+  <script src="http://<?php echo $_SERVER['SERVER_NAME']?>/slider/js/jquery.anythingslider.js"></script>
   <?php wp_head(); ?>
 </head>
 
@@ -34,7 +36,13 @@
 
   <?php roots_header_before(); ?>
     <header id="banner" class="navbar navbar-fixed-top" role="banner">
-		<?php $a = file_get_contents("http://" . $_SERVER['SERVER_NAME'] . "/static/header"); echo $a; ?> 
+	<?php 
+		$ch = curl_init(); 
+		curl_setopt($ch, CURLOPT_URL, "http://" . $_SERVER['SERVER_ADDR'] . "/static/header");
+		curl_setopt($ch, CURLOPT_RETURNTRANSFER, 1);
+		$output = curl_exec($ch); 
+		echo $output;
+	?>
     </header>
   <?php roots_header_after(); ?>
 
