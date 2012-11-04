@@ -5,7 +5,7 @@
       <?php dynamic_sidebar('roots-footer'); ?>
 	  <?php 
 		$ch = curl_init(); 
-		curl_setopt($ch, CURLOPT_URL, "http://" . $_SERVER['SERVER_ADDR'] . "/static/footer");
+		curl_setopt($ch, CURLOPT_URL, "http://" . $_SERVER['SERVER_NAME'] . "/static/footer");
 		curl_setopt($ch, CURLOPT_RETURNTRANSFER, 1);
 		$output = curl_exec($ch); 
 		echo $output;

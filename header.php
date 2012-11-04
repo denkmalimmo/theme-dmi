@@ -7,21 +7,16 @@
   <!-- / WEBMASTERTOOLS VERIFICATION -->
   <meta content="7FkS5x5z7SDnRIUL4pf/lozHbpK5B8Z6w8JKRxnQ9GA=" name="verify-v1" />
   <meta charset="utf-8">
-  <meta content="Bundesweite Top-Angebote an Denkmalschutz Immobilien. Zahlreiche Informationen zu Denkmalimmobilien für Kapitalanleger & Eigenutzer." name="description" />
   <meta content="Denkmalschutz Immobilien, Denkmalschutz, Denkmalimmobilien, Denkmal Immobilien, Baudenkmal, Denkmalgeschützte Immobilien" name="keywords" />
-  <meta content="NOODP" name="robots" />
   <title><?php wp_title('|', true, 'right'); bloginfo('name'); ?></title>
   <meta name="viewport" content="width=device-width">
   <link href="http://<?php echo $_SERVER['SERVER_NAME']?>/feed" rel="alternate" title="Aktuelle Objekte von Denkmalimmobilien.info" type="application/atom+xml" />
   <link href="/favicon.ico" rel="shortcut icon" type="image/png" />
-  <link href="https://plus.google.com/117040894947328715493" rel="publisher" />
   <script src="<?php echo get_template_directory_uri(); ?>/js/libs/modernizr-2.5.0.min.js"></script>
   <script src="//ajax.googleapis.com/ajax/libs/jquery/1.7.1/jquery.min.js"></script>
   <script>window.jQuery || document.write('<script src="<?php echo get_template_directory_uri(); ?>/js/libs/jquery-1.7.1.min.js"><\/script>')</script>
+  <?php wp_head(); ?>
   <?php roots_head(); ?>
-  <link rel="stylesheet" type="text/css" media="all" href="http://<?php echo $_SERVER['SERVER_NAME']?>/stylesheets/compiled/grid.css" />
-  <link rel="stylesheet" type="text/css" media="all" href="http://<?php echo $_SERVER['SERVER_NAME']?>/stylesheets/thickbox.css" />
-  <link rel="stylesheet" type="text/css" media="all" href="<?php echo get_stylesheet_directory_uri(); ?>/style.css" />
   <script src="http://<?php echo $_SERVER['SERVER_NAME']?>/javascripts/jquery.tools.min.js"></script>
   <script src="http://<?php echo $_SERVER['SERVER_NAME']?>/javascripts/thickbox.js"></script>
   <script src="http://<?php echo $_SERVER['SERVER_NAME']?>/javascripts/cufon.js"></script>
@@ -29,7 +24,9 @@
   <script src="http://<?php echo $_SERVER['SERVER_NAME']?>/javascripts/application.js"></script>
   <script src="http://<?php echo $_SERVER['SERVER_NAME']?>/javascripts/forms.js"></script>  
   <script src="http://<?php echo $_SERVER['SERVER_NAME']?>/slider/js/jquery.anythingslider.js"></script>
-  <?php wp_head(); ?>
+  <link rel="stylesheet" type="text/css" media="all" href="http://<?php echo $_SERVER['SERVER_NAME']?>/stylesheets/compiled/grid.css" />
+  <link rel="stylesheet" type="text/css" media="all" href="http://<?php echo $_SERVER['SERVER_NAME']?>/stylesheets/thickbox.css" />
+  <link rel="stylesheet" type="text/css" media="all" href="<?php echo get_stylesheet_directory_uri(); ?>/style.css" />
 </head>
 
 <body <?php body_class(roots_body_class()); ?>>
@@ -38,7 +35,7 @@
     <header id="banner" class="navbar navbar-fixed-top" role="banner">
 	<?php 
 		$ch = curl_init(); 
-		curl_setopt($ch, CURLOPT_URL, "http://" . $_SERVER['SERVER_ADDR'] . "/static/header");
+		curl_setopt($ch, CURLOPT_URL, "http://" . $_SERVER['SERVER_NAME'] . "/static/header");
 		curl_setopt($ch, CURLOPT_RETURNTRANSFER, 1);
 		$output = curl_exec($ch); 
 		echo $output;
