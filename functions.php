@@ -1,3 +1,3 @@
 <?php
-add_filter('wpseo_canonical', '__return_false');
+//add_filter('wpseo_canonical', '__return_false');
 ?>
