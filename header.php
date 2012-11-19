@@ -9,7 +9,6 @@
   <meta charset="utf-8">
   <meta content="Denkmalschutz Immobilien, Denkmalschutz, Denkmalimmobilien, Denkmal Immobilien, Baudenkmal, Denkmalgeschützte Immobilien" name="keywords" />
   <title><?php wp_title('|', true, 'right'); bloginfo('name'); ?></title>
-  <meta name="viewport" content="width=device-width">
   <link href="http://<?php echo $_SERVER['SERVER_NAME']?>/feed" rel="alternate" title="Aktuelle Objekte von Denkmalimmobilien.info" type="application/atom+xml" />
   <link href="/favicon.ico" rel="shortcut icon" type="image/png" />
   <script src="<?php echo get_template_directory_uri(); ?>/js/libs/modernizr-2.5.0.min.js"></script>
@@ -19,11 +18,10 @@
   <?php roots_head(); ?>
   <script src="http://<?php echo $_SERVER['SERVER_NAME']?>/javascripts/jquery.tools.min.js"></script>
   <script src="http://<?php echo $_SERVER['SERVER_NAME']?>/javascripts/thickbox.js"></script>
-  <script src="http://<?php echo $_SERVER['SERVER_NAME']?>/javascripts/cufon.js"></script>
-  <script src="http://<?php echo $_SERVER['SERVER_NAME']?>/javascripts/font.js"></script>
   <script src="http://<?php echo $_SERVER['SERVER_NAME']?>/javascripts/application.js"></script>
   <script src="http://<?php echo $_SERVER['SERVER_NAME']?>/javascripts/forms.js"></script>  
   <script src="http://<?php echo $_SERVER['SERVER_NAME']?>/slider/js/jquery.anythingslider.js"></script>
+  <link rel="stylesheet" type="text/css" media="all" href="http://fonts.googleapis.com/css?family=Open+Sans+Condensed:300&amp;text=0209+%E2%80%93+170+69+02" />
   <link rel="stylesheet" type="text/css" media="all" href="http://<?php echo $_SERVER['SERVER_NAME']?>/stylesheets/compiled/grid.css" />
   <link rel="stylesheet" type="text/css" media="all" href="http://<?php echo $_SERVER['SERVER_NAME']?>/stylesheets/thickbox.css" />
   <link rel="stylesheet" type="text/css" media="all" href="<?php echo get_stylesheet_directory_uri(); ?>/style.css" />
